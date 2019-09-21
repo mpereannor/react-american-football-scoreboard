@@ -7,23 +7,26 @@ function App(props) {
   //TODO: STEP 2 - Establish your applictaion's state with some useState hooks.  You'll need one for the home score and another for the away score.
 
   // const [score, setScore ] = useState(0);
-  const [lionScore, lionSetscore] = useState(0);
-  const[tigerScore, tigerSetscore] = useState(0);
+  // const [lionScore, lionSetscore] = useState(0);
+  // const[tigerScore, tigerSetscore] = useState(0);
 
+  const[lionScore, setLionScore] = useState(0);
+  const [tigerScore, setTigerScore] = useState(0);
+  
   const touchDownLion = () => {
-    lionSetscore(lionScore + 7);
+    setLionScore(lionScore + 7);
   };
 
   const fieldGoalLion = () => {
-    lionSetscore(lionScore + 3);
+    setLionScore(lionScore + 3);
   };
 
   const touchDownTiger = () => {
-    tigerSetscore(tigerScore + 7);
+    setTigerScore(tigerScore + 7);
   };
 
   const fieldGoalTiger = () => {
-    tigerSetscore(tigerScore + 3);
+    setTigerScore(tigerScore + 3);
   };
 
   return (
